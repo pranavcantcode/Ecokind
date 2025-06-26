@@ -1,0 +1,428 @@
+/* Reset & Base Styles */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f2e7;
+    color: #2f4f2f;
+    line-height: 1.6;
+}
+
+
+/* Header Styling */
+
+.site-header {
+    display: flex;
+    justify-content: flex-start;
+    /* Align content to the left */
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f8f9fa;
+    /* Optional: Add a background color */
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    /* Space between logo and text */
+}
+
+.logo {
+    width: 50px;
+    /* Adjust the size of the logo */
+    height: auto;
+}
+
+.logo-text {
+    text-align: left;
+}
+
+.company-name {
+    font-size: 1.5rem;
+    margin: 0;
+    color: #333;
+}
+
+.tagline {
+    font-size: 0.9rem;
+    margin: 0;
+    color: #666;
+}
+
+
+/* Navbar */
+
+nav {
+    background-color: #a9cba3;
+    padding: 0.8rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    /* Left links left, logout button right */
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 99;
+}
+
+nav .nav-left {
+    display: flex;
+    gap: 1.5rem;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    color: #e7f2e1;
+}
+
+
+/* Donation Selection Section */
+
+.donation-selection {
+    max-width: 1000px;
+    margin: 3rem auto;
+    padding: 0 1rem;
+}
+
+.donation-selection h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    color: #355e3b;
+    margin-bottom: 2rem;
+}
+
+.donation-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+}
+
+.donation-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.donation-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.donation-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.donation-card button {
+    background-color: #6ba64f;
+    color: white;
+    padding: 0.7rem 1.4rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.donation-card button:hover {
+    background-color: #568c3c;
+}
+
+
+/* Donation Form Modal */
+
+
+/* Modal Form Styling */
+
+.modal-content {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.3s ease-in;
+}
+
+.modal-content h2 {
+    margin-bottom: 1.5rem;
+    color: #355e3b;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+.form-group textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+.address-options {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.address-options button {
+    background-color: #6ba64f;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.address-options button:hover {
+    background-color: #568c3c;
+}
+
+.address-options input {
+    flex: 1;
+}
+
+.submit-button {
+    background-color: #355e3b;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #2a4628;
+}
+
+
+/* Modal Styling */
+
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Semi-transparent background */
+    justify-content: center;
+    /* Center horizontally */
+    align-items: center;
+    /* Center vertically */
+    z-index: 1000;
+    /* Ensure it appears above other elements */
+}
+
+.modal-content {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.3s ease-in;
+}
+
+
+/* Fund Us Section */
+
+.fund-us-section {
+    background-color: #f9f6ef;
+    padding: 3rem 1rem;
+    text-align: center;
+}
+
+.fund-us-section h2 {
+    font-size: 2rem;
+    color: #355e3b;
+    margin-bottom: 1rem;
+}
+
+.fund-us-section p {
+    max-width: 600px;
+    margin: 0 auto 1.5rem;
+}
+
+.fund-us-section button {
+    background-color: #355e3b;
+    color: white;
+    padding: 0.8rem 2rem;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 700;
+    transition: background-color 0.3s ease;
+}
+
+.fund-us-section button:hover {
+    background-color: #2a4628;
+}
+
+
+/* Impact Section */
+
+.impact-section {
+    background-color: #e8f5e0;
+    padding: 3rem 1rem;
+    text-align: center;
+}
+
+.impact-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #355e3b;
+}
+
+.impact-number {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #6ba64f;
+    margin-top: 0.5rem;
+}
+
+
+/* Testimonial Section */
+
+.testimonial-section {
+    background-color: #f5f1e8;
+    padding: 3rem 1rem;
+    overflow: hidden;
+}
+
+.testimonial-section h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #355e3b;
+    margin-bottom: 2rem;
+}
+
+.testimonial-slider {
+    overflow: hidden;
+    /* Hide overflow to create a clean scrolling effect */
+    position: relative;
+    width: 100%;
+    height: 200px;
+    /* Adjust height as needed */
+}
+
+.testimonial-track {
+    display: flex;
+    gap: 20px;
+    /* Space between testimonials */
+    animation: scrollTestimonials 15s linear infinite;
+    /* Smooth scrolling animation */
+}
+
+.testimonial-box {
+    flex: 0 0 300px;
+    /* Fixed width for each testimonial */
+    text-align: center;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-box img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+
+/* Footer */
+
+.footer {
+    background-color: #a9cba3;
+    padding: 2rem 1rem;
+    color: white;
+    text-align: center;
+}
+
+.footer p {
+    margin: 0.5rem 0;
+}
+
+
+/* Animations */
+
+@keyframes scrollLeft {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+/* Keyframes for scrolling animation */
+
+@keyframes scrollTestimonials {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
