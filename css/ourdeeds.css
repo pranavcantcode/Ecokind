@@ -1,0 +1,221 @@
+.counters {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin: 2rem auto;
+    max-width: 1000px;
+}
+
+.counter {
+    background: #fff;
+    border-radius: 12px;
+    padding: 0.5rem 2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    flex: 0 0 45%;
+    max-width: 400px;
+    transition: transform 0.3s ease;
+}
+
+.counter:hover {
+    transform: scale(1.05);
+    background-color: #f0f8f5;
+}
+
+.counter h3 {
+    font-size: 2.5rem;
+    color: #355e3b;
+    margin: 0;
+}
+
+.counter p {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    color: #555;
+}
+
+.deeds-intro.section {
+    padding-top: 1rem;
+    margin-top: 0;
+}
+
+.deeds-intro h2,
+.deeds-gallery h2 {
+    font-size: 2.2rem;
+    color: #355e3b;
+    margin-bottom: 1rem;
+}
+
+.deeds-intro p {
+    font-size: 1.2rem;
+    color: #444;
+    max-width: 700px;
+    margin: 0 auto 2rem auto;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: #355e3b;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.carousel-container {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.carousel-track {
+    display: flex;
+    gap: 2rem;
+    animation: slideLeft 40s linear infinite;
+    padding: 1rem 0;
+}
+
+.carousel-card {
+    flex: 0 0 80%;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.carousel-card img {
+    width: 200px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 1.5rem;
+}
+
+.card-text h3 {
+    font-size: 1.5rem;
+    color: #355e3b;
+    margin-bottom: 0.5rem;
+}
+
+.card-text p {
+    color: #444;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+@keyframes slideLeft {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-300%);
+    }
+}
+
+@media (max-width: 768px) {
+    .carousel-card {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+    }
+    .carousel-card img {
+        margin: 0 0 1rem 0;
+        width: 100%;
+    }
+}
+
+.moments-section {
+    padding: 4rem 2rem;
+    background-color: #f5f1e8;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: #355e3b;
+    text-align: center;
+    margin-bottom: 3rem;
+    font-weight: bold;
+}
+
+.moments-slider {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.slider-track {
+    display: flex;
+    gap: 2rem;
+    animation: scroll-horizontal 40s linear infinite;
+}
+
+.moment-card {
+    display: flex;
+    align-items: center;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 700px;
+    min-height: 300px;
+    overflow: hidden;
+    padding: 1rem;
+    flex-shrink: 0;
+}
+
+.moment-card img {
+    width: 40%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.text-content {
+    padding-left: 1.5rem;
+    text-align: left;
+    color: #2f4f2f;
+}
+
+.text-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #3a4b3b;
+}
+
+.text-content p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.5;
+}
+
+@keyframes scroll-horizontal {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+@media (max-width: 768px) {
+    .moment-card {
+        flex-direction: column;
+        width: 90%;
+    }
+    .moment-card img {
+        width: 100%;
+        height: 200px;
+    }
+    .text-content {
+        padding: 1rem 0 0;
+        text-align: center;
+    }
+}
